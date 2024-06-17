@@ -81,7 +81,7 @@ async function getWorldInfo(secured: boolean, id: number, retries: number = 0): 
     const protocol: string = secured ? 'https:' : 'http:';
     let worldlist: WorldList[];
     try {
-        worldlist = JSON.parse(await downloadText(`${protocol}//2004scape.org/api/v1/worldlist`));
+        worldlist = JSON.parse(await downloadText(`${protocol}//04scaper.ca/api/v1/worldlist`));
     } catch (e) {
         await sleep(1000);
         return getWorldInfo(secured, id, ++retries);
